@@ -5,8 +5,8 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 import netlify from "@astrojs/netlify";
-
 import vercel from "@astrojs/vercel/serverless";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -136,5 +136,5 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: true
   },
-  adapter: vercel()
+  adapter: netlify()
 });
