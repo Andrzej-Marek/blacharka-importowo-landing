@@ -1,0 +1,120 @@
+---
+// Import the necessary components
+import Map from "@components/Map.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSection from "@components/sections/landing/HeroSection.astro";
+import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
+import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
+import PricingSection from "@components/sections/pricing/PricingSection.astro";
+import FAQ from "@components/sections/FAQ.astro";
+import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
+import ContactSection from "@components/sections/ContactSection.astro";
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
+import mechanic from "@images/mechanic.jpg";
+import consultation from "@images/consultation.jpeg";
+import usaCar from "@images/usaCar.jpeg";
+
+const avatarSrcs: Array<string> = [
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+];
+---
+
+<MainLayout>
+  <HeroSection
+    title=`Twój Sprawdzony Serwis <span class="text-blue-500 dark:text-blue-400">Blacharski</span>`
+    subTitle="Naprawiamy szkody blacharskie z precyzją i dbałością o szczegóły, przywracając Twojemu pojazdowi idealny wygląd."
+    withReview={false}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.8</span> / 5`
+    starCount={4}
+    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    src={mechanic}
+    alt=""
+  />
+
+
+
+  <FeaturesGeneral
+    title="Dlaczego warto wybrać nasze usługi?"
+    subTitle="Nasza firma specjalizuje się w naprawie wszelkich uszkodzeń blacharskich. Dzięki wieloletniemu doświadczeniu oraz wykwalifikowanej kadrze pracowników, jesteśmy w stanie zagwarantować najwyższą jakość świadczonych usług."
+    alt="ScrewFast products in floating boxes"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=` <span class="text-blue-500 dark:text-blue-400">Nasza firma</span> oferuje nie tylko kompleksowe naprawy blacharskie, ale także inne usługi, takie jak:`
+    tabs={[
+      {
+        heading: "Mechanika i Elektryka Samochodowa",
+        content:
+          "Nasza firma oferuje usługi z zakresu mechaniki i eleketryki samochodowej. Dzięki temu, że posiadamy w swoim zespole wykwalifikowanych mechaników, jesteśmy w stanie zagwarantować kompleksową obsługę pojazdu.",
+        svg: "tools",
+        src: mechanic,
+        alt: "Yellow and black heavy equipment on brown grass field",
+        first: true,
+      },
+      {
+        heading: "Kompleksowe doradztwo", 
+        content:
+          "Nasi specjaliści służą pomocą w doborze odpowiednich części zamiennych oraz doradzają w zakresie konserwacji pojazdu. Dzięki temu, że posiadamy szeroką wiedzę na temat branży motoryzacyjnej, jesteśmy w stanie zapewnić kompleksowe doradztwo.",
+        svg: "dashboard",
+        src: consultation,  
+        alt: "A screenshot or graphic representation of the intuitive dashboard",
+      },
+      {
+        heading: "Import Samochodów z USA",
+        content:
+          "Nasza firma oferuje również usługi z zakresu importu samochodów z USA. Dzięki temu, że posiadamy szeroką wiedzę na temat procedur importowych, jesteśmy w stanie zapewnić kompleksową obsługę. Od kupna samochodu, aż po jego rejestrację w Polsce.",
+        svg: "house",
+        src: usaCar,  
+        alt: "Gray metal building frame near tower crane during daytime",
+      },
+    ]}
+    
+  />
+
+  <TestimonialsSection
+    title="Twoje zaufane miejsce na naprawy blacharskie"
+    subTitle=""
+    testimonials={[
+      {
+        content:
+          "Naszą misją jest zapewnienie najwyższej jakości usług, oraz zadowolenie klientów. Chcemy odczarować złą opinie na temat warsztatów samochodowych, dlatego stawiamy na profesjonalizm i jakość.",
+        author: "Andrzej Marek",
+        role: "Założycielka IMPORTOWO Sp. z o.o.",
+      },
+    ]}
+    statistics={[
+      {
+        count: "1.2k+",
+        description:
+          "Obsłużonych klientów, którzy zaufali naszej firmie",
+      },
+      {
+        count: "+70",
+        description:
+          "Pozytywnych opinii od zadowolonych klientów",
+      },
+      {
+        count: "75%",
+        description:
+          "klientów, którzy wracają do naszej firmy po kolejne usługi",
+      },
+      {
+        count: "100%",
+        description: "Satysfakcji klientów, którzy skorzystali z naszych usług",
+      },
+    ]}
+  />
+
+
+  <FAQ title="Najczęściej<br />zadawane pytania" faqs={faqs} />
+  <ContactSection />
+</MainLayout>

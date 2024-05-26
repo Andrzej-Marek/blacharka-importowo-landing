@@ -1,0 +1,44 @@
+---
+// Import section components
+import MainLayout from "@/layouts/MainLayout.astro";
+import Btn404 from "@components/ui/buttons/Btn404.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Strona nie odnaleźiona | ${SITE.title}`;
+
+
+// Define variables for page content
+const title: string = "404";
+const subTitle: string = "Opps! Strona nie została znaleziona.";
+const btnTitle: string = "Wróć do poprzedniej strony";
+---
+
+<MainLayout
+  title={pageTitle}
+>
+  <section class="grid h-svh place-content-center">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+      <div class="mx-auto max-w-screen-sm text-center">
+        <h1
+          class="text-dark mb-4 text-7xl font-extrabold text-blue-500 dark:text-blue-400 lg:text-9xl"
+        >
+          {title}
+        </h1>
+        <p
+          class="mb-4 text-balance text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 md:text-4xl"
+        >
+          {subTitle}
+        </p>
+
+        <!--Display a button that navigates user back to the previous page-->
+        <Btn404 title={btnTitle} id="go-back" />
+      </div>
+    </div>
+  </section>
+</MainLayout>
+<!--JavaScript code that adds click event to the Button, resulting in going back to the previous page in history-->
+<script>
+  document.getElementById("go-back")?.addEventListener("click", () => {
+    history.back();
+  });
+</script>

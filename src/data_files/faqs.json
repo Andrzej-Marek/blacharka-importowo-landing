@@ -1,0 +1,33 @@
+{
+  "subTitle": "Zapytaj nas o wszystko, odpowiemy na każde pytanie!",
+  "faqs": [
+    {
+      "question": "Jakie samochody serwisujecie?",
+      "answer": "Serwisujemy wszelkiego rodzaju samochody osobowe oraz busy, niezależnie od marki i modelu. Niezależnie od tego, czy posiadasz mały samochód miejski, SUV-a, samochód sportowy czy busa, jesteśmy gotowi zapewnić kompleksową naprawę karoserii."
+    },
+    {
+      "question": "Czy oferujecie naprawy powypadkowe?",
+      "answer": "Tak, specjalizujemy się w naprawach powypadkowych. Nasz zespół fachowców dokładnie oceni szkody i przeprowadzi wszystkie niezbędne naprawy, aby przywrócić Twój pojazd do stanu sprzed wypadku."
+    },
+    {
+      "question": "Czy naprawiacie samochody z USA?",
+      "answer": "TAK! Co więcej, importowo to nie tylko serwis, ale i portal, gdzie możesz zakupić pojazd z USA. Możemy nie tylko naprawić dla Ciebie pojazd z USA, ale również pomóc w jego zakupie. Sprawdź https://importowo.pl"
+    },
+    {
+      "question": "Jak długo trwa naprawa karoserii?",
+      "answer": "Czas naprawy zależy od stopnia uszkodzeń i zakresu potrzebnych prac. Proste naprawy mogą zająć kilka dni, natomiast bardziej skomplikowane przypadki mogą wymagać więcej czasu. Zawsze informujemy klientów o przewidywanym czasie realizacji po dokonaniu wstępnej oceny."
+    },
+    {
+      "question": "Czy mogę uzyskać wycenę naprawy przed rozpoczęciem prac?",
+      "answer": "Oczywiście! Oferujemy bezpłatne wyceny naprawy. Po dokonaniu szczegółowej oceny uszkodzeń przedstawimy Ci szczegółową wycenę oraz plan naprawy."
+    },
+    {
+      "question": "Czy udzielacie gwarancji na wykonane naprawy?",
+      "answer": "Tak, na wszystkie nasze usługi udzielamy gwarancji. Chcemy, aby nasi klienci mieli pewność, że ich pojazdy są w dobrych rękach, a wykonane naprawy będą trwałe i solidne."
+    },
+    {
+      "question": "Jak mogę umówić się na naprawę?",
+      "answer": "Aby umówić się na naprawę, możesz skontaktować się z nami telefonicznie, mailowo lub poprzez formularz kontaktowy na naszej stronie internetowej. Chętnie odpowiemy na wszystkie Twoje pytania i ustalimy dogodny termin wizyty."
+    }
+  ]
+}

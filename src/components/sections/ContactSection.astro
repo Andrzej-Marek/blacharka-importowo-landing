@@ -1,0 +1,78 @@
+---
+// Import the necessary dependencies.
+import AuthBtn from "@components/ui/buttons/AuthBtn.astro";
+import ContactIconBlock from "@components/ui/blocks/ContactIconBlock.astro";
+import TextInput from "@components/ui/forms/input/TextInput.astro";
+import EmailContactInput from "@components/ui/forms/input/EmailContactInput.astro";
+import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
+import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
+import Icon from "@components/ui/icons/Icon.astro";
+import Map from "@components/Map.astro";
+
+// Define the variables that will be used in this component
+const title: string = "Skontaktuj się z nami";
+const subTitle: string =
+  "Masz pytania, chcesz umówić się na serwis lub po prostu porozmawiać? Skontaktuj się z nami!";
+---
+
+<!-- Contact Us -->
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+  <div class="mx-auto max-w-2xl lg:max-w-5xl">
+    <div class="text-center mb-4">
+      <h1
+        class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+      >
+        {title}
+      </h1>
+      <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
+        {subTitle}
+      </p>
+    </div>
+
+    <div class="grid  lg:grid-cols-2 gap-6">
+
+      <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
+      <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
+        <!-- <ContactIconBlock -->
+        <!--   heading="FAQ" -->
+        <!--   content="Sprawdź najczęściej zadawane pytania." -->
+        <!--   isLinkVisible={true} -->
+        <!--   linkTitle="Zobacz FAQ" -->
+        <!--   linkURL="#" -->
+        <!--   isArrowVisible={true} -->
+        <!--   ><Icon name="question" /> -->
+        <!-- </ContactIconBlock> -->
+
+        <ContactIconBlock
+          heading="Zadzwoń do nas"
+          content="IMPORTOWO"
+          isAddressVisible={true}
+          addressContent="+48 537 229 427"
+          ><Icon name="mapPin" />
+        </ContactIconBlock>
+
+        <ContactIconBlock
+          heading="Odwiedź nas"
+          content="IMPORTOWO"
+          isAddressVisible={true}
+          addressContent="ul. Pszczyńska 116 43-254 Warszowice"
+          ><Icon name="mapPin" />
+        </ContactIconBlock>
+
+        <ContactIconBlock
+          heading="Skontaktuj się z nami"
+          content="Masz pytania? Napisz do nas."
+          isLinkVisible={true}
+          linkTitle="serwis@importowo.pl"
+          linkURL="#"
+          ><Icon name="envelopeOpen" />
+        </ContactIconBlock>
+      </div>
+      <div class="h-72 lg:h-full">
+      <Map />
+        </div>
+      
+
+    </div>
+  </div>
+</section>
