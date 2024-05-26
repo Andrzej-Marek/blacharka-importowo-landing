@@ -136,5 +136,5 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: true
   },
-  adapter: netlify()
+  adapter: vercel()
 });
