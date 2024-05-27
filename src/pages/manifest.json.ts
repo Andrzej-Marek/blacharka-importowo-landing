@@ -44,14 +44,14 @@ export const GET: APIRoute = async () => {
   );
 
   const manifest = {
-    short_name: "ScrewFast",
-    name: "ScrewFast",
+    short_name: "Blacharstwo Samochodowe",
+    name: "Blacharstwo Samochodowe - Warszowice",
     icons,
     display: "minimal-ui",
     id: "/",
     start_url: "/",
-    theme_color: "#FFEDD5",
-    background_color: "#262626",
+    theme_color: "#7284FF",
+    background_color: "#ffffff",
   };
 
   return new Response(JSON.stringify(manifest));
