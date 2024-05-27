@@ -11,15 +11,15 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://screwfast.uk",
+  site: "https://serwis.importowo.pl",
   image: {
     domains: ["images.unsplash.com"]
   },
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "fr"],
+    defaultLocale: "pl",
+    locales: ["pl", "en"],
     fallback: {
-      fr: "en"
+      en: "en"
     },
     routing: {
       prefixDefaultLocale: false
@@ -28,21 +28,21 @@ export default defineConfig({
   prefetch: true,
   integrations: [tailwind(), sitemap({
     i18n: {
-      defaultLocale: "en",
+      defaultLocale: "pl",
       // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
       locales: {
-        en: "en",
+        pl: "pl",
         // The `defaultLocale` value must present in `locales` keys
         fr: "fr"
       }
     }
   }), starlight({
-    title: "ScrewFast Docs",
+    title: "Serwis Blacharski Importowo",
     defaultLocale: "root",
     locales: {
       root: {
-        label: "English",
-        lang: "en"
+        label: "Polish",
+        lang: "pl"
       },
       de: {
         label: "Deutsch",
@@ -118,13 +118,13 @@ export default defineConfig({
       tag: "meta",
       attrs: {
         property: "og:image",
-        content: "https://screwfast.uk" + "/social.webp"
+        content: "https://f003.backblazeb2.com/file/importowo-prod/static/og-image.webp"
       }
     }, {
       tag: "meta",
       attrs: {
         property: "twitter:image",
-        content: "https://screwfast.uk" + "/social.webp"
+        content: "https://f003.backblazeb2.com/file/importowo-prod/static/og-image.webp"
       }
     }]
   }), compressor({
