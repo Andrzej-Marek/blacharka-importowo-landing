@@ -1,5 +1,6 @@
 ---
 // Importing necessary components
+import { Umami } from 'astro-analytics';
 import Meta from "@components/Meta.astro";
 import Navbar from "@components/sections/Navbar.astro";
 import FooterSection from "@components/sections/FooterSection.astro";
@@ -27,7 +28,7 @@ We set the language of the page to English and add classes for scrollbar and scr
     <Meta meta={meta} structuredData={structuredData} />
     <!-- Define the title of the page -->
     <title>{title}</title>
-    <script type="text/partytown" async defer src="https://analytics.bmwimport.pl/script.js" data-website-id="cc05712d-44cd-48f0-b41a-0e68e1b97e61"></script>
+    <script is:inline defer src="https://analytics.importowo.pl/script.js" data-website-id="40fcb394-3adf-4925-8aef-ecf1bdbb6844"></script>
     <script is:inline>
       // Script to handle dark mode. It will check if the theme is stored in localStorage or if dark theme is preferred by system settings
       if (
@@ -56,6 +57,7 @@ We set the language of the page to English and add classes for scrollbar and scr
   <body
     class="bg-neutral-200 selection:bg-blue-400 selection:text-neutral-700 dark:bg-neutral-800"
   >
+
     <!--
     Setting up the main structure of the page.
     The Navbar is placed at the top, with a slot for the main content and FooterSection at the bottom.
