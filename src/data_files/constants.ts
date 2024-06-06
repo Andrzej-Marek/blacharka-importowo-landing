@@ -3,7 +3,7 @@ import ogImageSrc from "@images/social.png";
 export const SITE = {
   title: "Profesjonalny Serwis Blacharski | Naprawa Karoserii Samochodów i Busów",
   tagline: "Naprawiamy Karoserie z Precyzją i Pasją",
-  keywords: "serwis blacharski, naprawa karoserii, usuwanie wgnieceń, renowacja karoserii, naprawa powypadkowa, naprawa blacharska, naprawa samochodów, naprawa busów",
+  keywords: "serwis blacharski, naprawa karoserii, usuwanie wgnieceń, renowacja karoserii, naprawa powypadkowa, naprawa blacharska, blacharka samochodowa, blacharstwo samochodowe, naprawa samochodów, naprawa busów",
   description_short: "Skorzystaj z usług naszego serwisu blacharskiego. Naprawa szkód blacharskich, usuwanie wgnieceń i renowacja karoserii samochodów oraz busów. Gwarancja jakości i profesjonalizmu.",
   description: "Profesjonalny serwis blacharski oferujący kompleksowe naprawy karoserii samochodów i busów. Specjalizujemy się w naprawach powypadkowych, usuwaniu wgnieceń i renowacji karoserii. Gwarantujemy najwyższą jakość usług i pełne zadowolenie klientów.",
   url: "https://blacharstwo-importowo.pl",
