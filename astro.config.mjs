@@ -32,12 +32,14 @@ export default defineConfig({
     sitemap({
       i18n: {
         defaultLocale: "pl",
-        // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
         locales: {
           pl: "pl",
-          // The `defaultLocale` value must present in `locales` keys
-          fr: "fr",
         },
+      },
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"]
       },
     }),
     starlight({
@@ -148,11 +150,6 @@ export default defineConfig({
     compressor({
       gzip: false,
       brotli: true,
-    }),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-      },
     }),
   ],
   output: "hybrid",
