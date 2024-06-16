@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
+import beforeAfter from "@images/before-after.png";
 // Define props from Astro
 const {
   title,
@@ -41,10 +42,11 @@ interface Props {
 
 <!-- Defining a grid container that holds all the content -->
 <section
-  class="h-[300px] flex flex-col justify-center items-center bg-neutral-100 dark:bg-neutral-800"
+  class="pt-10 lg:pt-0 grid lg:grid-cols-2 justify-center items-center bg-neutral-100 dark:bg-neutral-800"
 >
   <!-- Title and description -->
     <!-- Each h1 and p tag renders a portion of the title and subTitle defined above -->
+  <div >
     <h1
       class="text-center text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight"
     >
@@ -58,6 +60,11 @@ interface Props {
       {subTitle}
     </p>
   }
-    <p class="mt-3 text-pretty text-lg dark:text-neutral-400 font-bold">Warszowice, +48 537 229 427</p>
+    <p class="mt-3 text-pretty text-center text-lg dark:text-neutral-400 font-bold">Warszowice, +48 537 229 427</p>
+    </div>
+  <div class="max-w-full h-auto pt-6 lg:pt-0">
+
+  <Image src={beforeAfter} alt="before after car"/>
+    </div>
     <!-- Action Button Section: This section includes two CTAs with their own styles and URL -->
 </section>
