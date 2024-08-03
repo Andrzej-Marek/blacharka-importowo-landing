@@ -1,13 +1,13 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "Profesjonalny Serwis Blacharski | Naprawa Karoserii Samochodów i Busów",
+  title: "Naprawy Blacharsko-Lakiernicze | Kompleksowy Serwis Powypadkowy",
   tagline: "Naprawiamy Karoserie z Precyzją i Pasją",
-  keywords: "serwis blacharski, naprawa karoserii, usuwanie wgnieceń, renowacja karoserii, naprawa powypadkowa, naprawa blacharska, blacharka samochodowa, blacharstwo samochodowe, naprawa samochodów, naprawa busów",
-  description_short: "Skorzystaj z usług naszego serwisu blacharskiego. Naprawa szkód blacharskich, usuwanie wgnieceń i renowacja karoserii samochodów oraz busów. Gwarancja jakości i profesjonalizmu.",
-  description: "Profesjonalny serwis blacharski oferujący kompleksowe naprawy karoserii samochodów i busów. Specjalizujemy się w naprawach powypadkowych, usuwaniu wgnieceń i renowacji karoserii. Gwarantujemy najwyższą jakość usług i pełne zadowolenie klientów.",
-  url: "https://blacharstwo-importowo.pl",
-  author: "Andrzej Marek",
+  keywords: "Naprawy blacharskie, Lakierowanie samochodów, Naprawy powypadkowe, Konserwacja podwozia, Blacharstwo samochodowe, Lakiernictwo samochodowe, Renowacja pojazdów, Naprawa karoserii, Usługi blacharskie, Profesjonalne lakierowanie, Serwis blacharsko-lakierniczy, Naprawa wgnieceń, Usuwanie korozji, Kompleksowe naprawy powypadkowe, Malowanie samochodów, Regeneracja karoserii, Ochrona przed rdzą, Lakierowanie powypadkowe, Warsztat blacharsko-lakierniczy, Blacharz samochodowy, Lakiernik samochodowy, Warsztat samochodowy, Naprawy blacharsko-lakiernicze, Usługi lakiernicze, Naprawa i lakierowanie, Blacharskie naprawy powypadkowe, Lakierowanie nadwozia, Profesjonalna naprawa samochodów, Blacharka i lakiernictwo, Autoserwis blacharsko-lakierniczy",
+  description_short: "Profesjonalny serwis blacharsko-lakierniczy oferujący kompleksowe naprawy powypadkowe, blacharstwo, lakiernictwo oraz konserwację podwozia. Doświadczony zespół, nowoczesne technologie i indywidualne podejście. Skontaktuj się z nami i przywróć blask swojemu pojazdowi",
+  description: "Profesjonalny serwis blacharsko-lakierniczy oferujący kompleksowe naprawy powypadkowe, blacharstwo, lakiernictwo oraz konserwację podwozia. Doświadczony zespół, nowoczesne technologie i indywidualne podejście. Skontaktuj się z nami i przywróć blask swojemu pojazdowi",
+  url: "https://serwis.importowo.pl",
+  author: "IMPORTOWO",
 };
 
 export const SEO = {

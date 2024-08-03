@@ -44,8 +44,8 @@ export const GET: APIRoute = async () => {
   );
 
   const manifest = {
-    short_name: "Blacharstwo Samochodowe",
-    name: "Blacharstwo Samochodowe - Warszowice",
+    short_name: "Serwis Blacharsko - Lakierniczy Warszowice",
+    name: "Serwis Blacharsko - Lakierniczy Warszowice",
     icons,
     display: "minimal-ui",
     id: "/",
