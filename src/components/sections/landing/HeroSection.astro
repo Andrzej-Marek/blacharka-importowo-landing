@@ -36,7 +36,7 @@ interface Props {
   rating?: string;
   reviews?: string;
   src?: any;
-  alt?: string;
+  alt?: string; 
 }
 ---
 
@@ -60,7 +60,12 @@ interface Props {
       {subTitle}
     </p>
   }
-    <p class="mt-3 text-pretty text-center text-lg dark:text-neutral-400 font-bold">Warszowice, +48 537 229 427</p>
+    <div class="flex justify-center" >
+      <a href="tel:+48 537 229 427" class="phone">
+    <button class="lg:hidden mt-3 rounded-xl animation-pulse bg-neutral-800 text-pretty text-center text-lg dark:bg-blue-400 p-4 dark:text-white font-bold">Kliknij, aby skontaktować się z nami</button>
+      <div class="hidden lg:block text-white mt-4 text-lg underline">Skontaktuj się z nami tel. +48 537 229 427</div>
+    </a>
+      </div>
     </div>
   <div class="max-w-full h-auto pt-6 lg:pt-0">
 
