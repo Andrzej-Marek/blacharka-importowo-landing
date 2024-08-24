@@ -48,7 +48,7 @@ interface Props {
     <!-- Each h1 and p tag renders a portion of the title and subTitle defined above -->
   <div >
     <h1
-      class="phone text-center text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight"
+      class="text-center text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight"
     >
       <!-- About Fragment: https://docs.astro.build/en/basics/astro-syntax/#fragments -->
       <Fragment set:html={title} />
@@ -61,8 +61,8 @@ interface Props {
       {subTitle}
     </p>
   }
-    <div class="flex justify-center" class="phone2">
-      <a href="tel:+48 537 229 427" >
+    <div class="flex justify-center" >
+      <a href="tel:+48 537 229 427" class="phone">
     <button class="lg:hidden mt-3 rounded-xl animation-pulse bg-neutral-800 text-pretty text-center text-lg dark:bg-blue-400 p-4 dark:text-white font-bold">Kliknij, aby skontaktować się z nami</button>
       <div class="hidden lg:block text-white mt-4 text-lg underline">Skontaktuj się z nami tel. +48 537 229 427</div>
     </a>

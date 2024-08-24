@@ -49,17 +49,8 @@ We set the language of the page to English and add classes for scrollbar and scr
   gtag("js", new Date());
 
   gtag('config', 'G-NVSM33GZ');
-
-  const phone = document.querySelector(`.phone`)
-
-  phone.addEventListener('click', () => {
-    console.log(`CLICKED 1`)
-    /* gtag('event', 'conversion', {
-      'send_to': 'AW-815004056/ZJVOCPqo9MwZEJjzz4QD',
-    }); */
-    console.log(`CLICKED 2`)
-  })
 </script>
+
 <!-- Google Tag Manager -->
 <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -146,4 +137,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     </style>
   </body>
+  <script is:inline>
+  const phone  = document.querySelector(`.phone`)
+  console.log(`phone`, phone, window.dataLayer)
+
+  phone.addEventListener('click', () => {
+    console.log(`--- phone clicked ---`)
+    window.dataLayer.push('event', 'conversion', {
+      'send_to': 'AW-815004056/ZJVOCPqo9MwZEJjzz4QD',
+    });
+  })
+
+
+</script>
 </html>
