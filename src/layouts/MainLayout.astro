@@ -24,21 +24,49 @@ We set the language of the page to English and add classes for scrollbar and scr
 -->
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
   <head>
-<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-4LV51TDQ3L"></script>
-  <script type="text/partytown">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-  gtag('config', 'G-4LV51TDQ3L');
-  </script>
     <!-- Adding metadata to the HTML document -->
     <Meta meta={meta} structuredData={structuredData} />
     <!-- Define the title of the page -->
     <title>{title}</title>
+    <script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+</script>
+
     <script is:inline defer src="https://analytics.importowo.pl/script.js" data-website-id="40fcb394-3adf-4925-8aef-ecf1bdbb6844"></script>
 
 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVSM33GZ"></script>
+
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag('config', 'G-NVSM33GZ');
+
+  const phone = document.querySelector(`.phone`)
+
+  phone.addEventListener('click', () => {
+    console.log(`CLICKED 1`)
+    /* gtag('event', 'conversion', {
+      'send_to': 'AW-815004056/ZJVOCPqo9MwZEJjzz4QD',
+    }); */
+    console.log(`CLICKED 2`)
+  })
+</script>
+<!-- Google Tag Manager -->
+<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NVSM33GZ');</script>
+<!-- End Google Tag Manager -->
     <script is:inline>
       // Script to handle dark mode. It will check if the theme is stored in localStorage or if dark theme is preferred by system settings
       if (
@@ -63,12 +91,16 @@ We set the language of the page to English and add classes for scrollbar and scr
 
       requestAnimationFrame(raf);
     </script>
-
-
   </head>
   <body
     class="bg-neutral-200 selection:bg-blue-400 selection:text-neutral-700 dark:bg-neutral-800"
   >
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVSM33GZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 
     <!--
     Setting up the main structure of the page.
