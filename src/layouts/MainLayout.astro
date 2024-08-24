@@ -144,7 +144,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   for (var i = 0; i < phones.length; i++) {
     phones[i].addEventListener('click', () => {
       console.log(`--- phone clicked ---`)
-      window.dataLayer.push('event', 'conversion', {
+      window.dataLayer.push( {
+        event: 'phone_clicked',
         'send_to': 'AW-815004056/ZJVOCPqo9MwZEJjzz4QD',
         'event_callback': callback
       });
