@@ -1,4 +1,5 @@
-import { a6 as AstroJSX, S as renderJSX, a7 as createVNode, A as AstroError } from './chunks/astro_D8pJ0xnu.mjs';
+import { f as AstroUserError, A as AstroError } from './chunks/astro/assets-service_64qOpLeW.mjs';
+import { A as AstroJSX, b as renderJSX, d as createVNode } from './chunks/astro/server_CDyTlUD0.mjs';
 
 const slotName = (str) => str.trim().replace(/[-_]([a-z])/g, (_, w) => w.toUpperCase());
 async function check(Component, props, { default: children = null, ...slotted } = {}) {
@@ -33,6 +34,7 @@ async function renderToStaticMarkup(Component, props = {}, { default: children =
 }
 function throwEnhancedErrorIfMdxComponent(error, Component) {
   if (Component[Symbol.for("mdx-component")]) {
+    if (AstroUserError.is(error)) return;
     throw new AstroError({
       message: error.message,
       title: error.name,
@@ -42,10 +44,12 @@ function throwEnhancedErrorIfMdxComponent(error, Component) {
     });
   }
 }
-var server_default = {
+const renderer = {
+  name: "astro:jsx",
   check,
   renderToStaticMarkup
 };
+var server_default = renderer;
 
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),];
 
