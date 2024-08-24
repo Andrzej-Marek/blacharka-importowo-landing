@@ -28,12 +28,6 @@ We set the language of the page to English and add classes for scrollbar and scr
     <Meta meta={meta} structuredData={structuredData} />
     <!-- Define the title of the page -->
     <title>{title}</title>
-    <script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-</script>
 
     <script is:inline defer src="https://analytics.importowo.pl/script.js" data-website-id="40fcb394-3adf-4925-8aef-ecf1bdbb6844"></script>
 
@@ -146,6 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 }
 
+  console.log(window.dataLayer.push)
   for (var i = 0; i < phones.length; i++) {
     phones[i].addEventListener('click', () => {
       console.log(`--- phone clicked ---`)
@@ -153,6 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         'send_to': 'AW-815004056/ZJVOCPqo9MwZEJjzz4QD',
         'event_callback': callback
       });
+      console.log(`SENDED`)
     })
   }
 
