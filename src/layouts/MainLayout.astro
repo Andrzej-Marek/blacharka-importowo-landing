@@ -138,15 +138,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </style>
   </body>
   <script is:inline>
-  const phone  = document.querySelector(`.phone`)
+  const phones  = document.querySelectorAll(`.phone`)
   console.log(`phone`, phone, window.dataLayer)
 
-  phone.addEventListener('click', () => {
-    console.log(`--- phone clicked ---`)
-    window.dataLayer.push('event', 'conversion', {
-      'send_to': 'AW-815004056/ZJVOCPqo9MwZEJjzz4QD',
-    });
-  })
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+}
+
+  for (var i = 0; i < phones.length; i++) {
+    phones[i].addEventListener('click', () => {
+      console.log(`--- phone clicked ---`)
+      window.dataLayer.push('event', 'conversion', {
+        'send_to': 'AW-815004056/ZJVOCPqo9MwZEJjzz4QD',
+        'event_callback': callback
+      });
+    })
+  }
 
 
 </script>

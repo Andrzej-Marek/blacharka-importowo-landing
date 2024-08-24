@@ -52,8 +52,9 @@ fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
     {
       isLinkVisible ? (
         <a
-          class="group mt-2 inline-flex items-center gap-x-2 rounded-lg text-sm font-medium text-zinc-600 outline-none ring-zinc-500 transition duration-300 hover:text-zinc-800 focus-visible:ring dark:text-zinc-400 dark:ring-zinc-200 dark:hover:text-zinc-200 dark:focus:outline-none dark:focus:ring-1 "
+          class="phone underline group mt-2 inline-flex items-center gap-x-2 rounded-lg text-sm font-medium text-zinc-600 outline-none ring-zinc-500 transition duration-300 hover:text-zinc-800 focus-visible:ring dark:text-zinc-400 dark:ring-zinc-200 dark:hover:text-zinc-200 dark:focus:outline-none dark:focus:ring-1 "
           href={linkURL}
+          
         >
           {linkTitle}
           {isArrowVisible ? <Fragment set:html={arrowSVG} /> : null}
