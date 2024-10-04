@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --primary-300: #626262;
+  --primary: #ffb202;
+  --light: #fff;
+  --dark: #0e0e0e;
+
+  --gray-800: #1c1c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+body {
+  font-family: Poppins, Helvetica, sans-serif;
+  color: var(--light);
+  background: var(--background);
+}
+
+.left-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--primary);
+  }
+}
+
+.left-line > * {
+  margin-left: theme("spacing.6");
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
