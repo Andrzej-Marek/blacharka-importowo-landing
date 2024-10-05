@@ -1,11 +1,8 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
+import { GalleryQueryResult } from "./sanity.types";
 
-export async function getPost() {
-  return client.fetch(
-    groq`*[_type == "post"]{
-      _id,
-mainImage{
+const imageQuery = `
   ...asset->{
     extension,
     _id,
@@ -17,8 +14,37 @@ mainImage{
         height
       }
     }
-  }
+}
+`;
+export async function getGalleries(): Promise<GalleryQueryResult[]> {
+  return client.fetch(
+    groq`*[_type == "gallery"]{
+      _id,
+slug,
+title,
+images[] {
+${imageQuery}
+  },
+imagesAfter[] {
+${imageQuery}
 }
     }`,
   );
 }
+
+export const getGalleryBySlug = (slug: string) => {
+  return client.fetch<GalleryQueryResult>(
+    groq`*[_type == "gallery" && slug.current == $slug]{
+      _id,
+slug,
+title,
+images[] {
+${imageQuery}
+  },
+imagesAfter[] {
+${imageQuery}
+}
+    }[0]`,
+    { slug },
+  );
+};

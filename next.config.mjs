@@ -8,6 +8,10 @@ const nextConfig = {
         hostname: "placehold.co",
       },
       {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
+      {
         protocol: "http",
         hostname: "via.placeholder.com",
       },

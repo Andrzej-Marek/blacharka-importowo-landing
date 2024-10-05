@@ -31,7 +31,7 @@ export const AboutUseSection = () => (
           </Text>
         </div>
         <Image
-          src="http://via.placeholder.com/1280x720"
+          src="/about-us.jpg"
           className="w-full"
           alt="Image of service"
           width={1280}
