@@ -21,6 +21,7 @@ export const ServicesPhotosSection = async () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
           {golf5Gallery.images.slice(0, 3).map((image) => (
             <Image
+              key={image._id}
               src={image.url}
               alt={image.alt ?? ""}
               width={image.width}
@@ -29,6 +30,7 @@ export const ServicesPhotosSection = async () => {
           ))}
           {bmw368service.images.slice(0, 3).map((image) => (
             <Image
+              key={image._id}
               src={image.url}
               alt={image.alt ?? ""}
               width={image.width}
