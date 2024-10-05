@@ -39,7 +39,7 @@ export const ContactSection = () => (
             <Text>Poniedziałek - Piątek: 7.00 - 16.00</Text>
           </div>
           <div>
-            <Text withLine variant="h4">
+            <Text withLine variant="h4" className="mb-4 sm:mb-8">
               Lokalizacja
             </Text>
             <Map />
