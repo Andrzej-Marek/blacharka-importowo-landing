@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "url('https://placehold.co/600x400')",
+        hero: "url('/hero.jpg')",
       },
       colors: {
         background: "var(--background)",

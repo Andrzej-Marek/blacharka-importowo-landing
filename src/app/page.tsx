@@ -5,8 +5,12 @@ import { OurServicesSection } from "@/components/organisms/our-services-section"
 import { ServicesPhotosSection } from "@/components/organisms/services-photos-section";
 import { TestimonialsSection } from "@/components/organisms/testimonials-section";
 import { WhyChooseUsSection } from "@/components/organisms/why-choose-us-section";
+import { getPost } from "@/sanity/sanity.query";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPost();
+
+  console.log({ posts: posts[0] });
   return (
     <div>
       <Header

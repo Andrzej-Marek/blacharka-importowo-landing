@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/vision": "3.59.1",
     "clsx": "2.1.1",
     "lucide-react": "0.447.0",
     "next": "14.2.13",
+    "next-sanity": "9.5.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sanity": "3.59.1",
+    "tailwind-merge": "2.5.3"
   },
   "devDependencies": {
     "@types/leaflet": "1.9.12",

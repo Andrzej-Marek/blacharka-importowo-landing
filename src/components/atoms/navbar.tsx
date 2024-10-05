@@ -22,8 +22,6 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
-                <NavItem href="#">O nas </NavItem>
-                <NavItem href="#">Blog </NavItem>
                 <NavItem href={routes.gallery.path}>Galeria Serwisów </NavItem>
                 <NavItem href={routes.contact.path}>Kontakt </NavItem>
               </ul>
@@ -65,8 +63,6 @@ export const Navbar = () => {
           >
             <nav aria-label="Global">
               <ul className="flex flex-col items-center gap-4 text-sm py-4">
-                <NavItem href="#">O nas </NavItem>
-                <NavItem href="#">Blog </NavItem>
                 <NavItem href={routes.gallery.path}>Galeria Serwisów </NavItem>
                 <NavItem href={routes.contact.path}>Kontakt </NavItem>
               </ul>
