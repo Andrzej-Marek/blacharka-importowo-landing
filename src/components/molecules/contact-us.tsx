@@ -1,17 +1,27 @@
+"use client";
 import Link from "next/link";
 import { Button } from "../atoms/button";
 import { PhoneIcon } from "lucide-react";
 import { cn } from "@/utils";
+import { gtmOnPhoneClick } from "@/lib/gtm";
 
 export const ContactUs = ({ className }: { className?: string }) => (
   <div className={cn("flex flex-col gap-2", className)}>
     <Link href="tel:+48537229427" rel="noreferrer">
-      <Button className="mb-2" leftIcon={<PhoneIcon />}>
+      <Button
+        className="mb-2"
+        leftIcon={<PhoneIcon />}
+        onClick={() => gtmOnPhoneClick()}
+      >
         +48 537 229 427
       </Button>
     </Link>
     <Link href="https://wa.me/+48537229427" target="_blank" rel="noreferrer">
-      <Button color="whatapp" leftIcon={<WhatsAppIcon className="w-6 h-6" />}>
+      <Button
+        color="whatapp"
+        leftIcon={<WhatsAppIcon className="w-6 h-6" />}
+        onClick={() => gtmOnPhoneClick()}
+      >
         Napisz Na WhatsApp
       </Button>
     </Link>

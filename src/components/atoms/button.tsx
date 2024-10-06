@@ -6,14 +6,17 @@ export const Button = ({
   className,
   leftIcon,
   color = "primary",
+  onClick,
 }: {
   children: ReactNode;
   className?: string;
   leftIcon?: ReactNode;
   color?: "primary" | "whatapp";
+  onClick?: () => void;
 }) => {
   return (
     <button
+      onClick={onClick}
       className={cn(
         "group relative inline-block focus:outline-none focus:ring",
         className,

@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import type { Metadata } from "next";
 
@@ -51,7 +52,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
+      <GoogleTagManager gtmId="GTM-NVSM33GZ" />
       <body className={`${poppins.className}`}>
         <Navbar />
         {children}
