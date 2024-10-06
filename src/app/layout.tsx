@@ -55,6 +55,14 @@ export default function RootLayout({
     <html lang="pl">
       <GoogleTagManager gtmId="GTM-NVSM33GZ" />
       <body className={`${poppins.className}`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NVSM33GZ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <Navbar />
         {children}
         <Analytics />
