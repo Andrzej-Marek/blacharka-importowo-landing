@@ -15,7 +15,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Serwis Blacharsko Lakierniczy | IMPORTOWO",
+  title:
+    "Serwis Blacharsko Lakierniczy | Kompleksowe Naprawy Powypadkowe | IMPORTOWO",
   description:
     "Serwis Importowo to Twój zaufany partner w kompleksowej naprawie samochodów powypadkowych i nie tylko. Oferujemy usługi blacharskie, lakiernicze oraz naprawy mechaniczne z pełną dokumentacją zdjęciową. Bez ukrytych kosztów, szybki czas realizacji i stały kontakt.",
   keywords: [
@@ -23,9 +24,14 @@ export const metadata: Metadata = {
     "lakiernictwo",
     "naprawy powypadkowe",
     "serwis blacharsko-lakierniczy",
+    "kompleksowe naprawy powypadkowe",
     "blacharz",
     "lakiernik",
     "importowo",
+    "warsztat blacharski",
+    "warsztat lakierniczy",
+    "naprawa samochodu",
+    "naprawa auta",
     "naprawa progów",
     "naprawa samochodu z USA",
     "naprawy powypadkowe",
