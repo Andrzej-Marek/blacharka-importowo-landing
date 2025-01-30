@@ -5,12 +5,22 @@ import { cn } from "@/utils";
 
 export const ContactUs = ({ className }: { className?: string }) => (
 	<div className={cn("flex flex-col gap-2", className)}>
-		<Link href="tel:+48537229427" rel="noreferrer" data-gtm-event="phone_click">
+		<Link
+			href="tel:+48537229427"
+			rel="noreferrer"
+			data-gtm-event="phone_click"
+			className="w-fit"
+		>
 			<Button className="mb-2" leftIcon={<PhoneIcon />}>
 				+48 537 229 427
 			</Button>
 		</Link>
-		<Link href="https://wa.me/+48537229427" target="_blank" rel="noreferrer">
+		<Link
+			href="https://wa.me/+48537229427"
+			target="_blank"
+			rel="noreferrer"
+			className="w-fit"
+		>
 			<Button
 				color="whatapp"
 				leftIcon={<WhatsAppIcon className="w-6 h-6" />}
