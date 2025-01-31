@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #0a0a0a;
@@ -12,6 +10,14 @@
   --gray-800: #1c1c1c;
 }
 
+@theme {
+  --color-background: #0a0a0a;
+  --color-primary-300: #626262;
+  --color-primary: #ffb202;
+  --color-light: #fff;
+  --color-dark: #0e0e0e;
+  --color-gray-800: #1c1c1c;
+}
 @media (prefers-color-scheme: dark) {
   :root {
   }
@@ -39,6 +45,13 @@ body {
 
 .left-line > * {
   margin-left: theme("spacing.6");
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 @layer utilities {

@@ -12,7 +12,7 @@ export const Header = ({
   hideContactUs?: boolean;
 }) => {
   return (
-    <div className="bg-hero min-h-[400px] md:min-h-[600px] flex flex-col justify-center bg-cover bg-center">
+    <div className="bg-[url(/hero.jpg)] min-h-[400px] md:min-h-[600px] flex flex-col justify-center bg-cover bg-center">
       <div>
         <Container>
           <div className="text-center md:text-left">

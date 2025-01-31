@@ -22,6 +22,7 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
+                <NavItem href="/">Strona Główna</NavItem>
                 <NavItem href={routes.gallery.path}>Galeria Serwisów </NavItem>
                 <NavItem href={routes.contact.path}>Kontakt </NavItem>
               </ul>
