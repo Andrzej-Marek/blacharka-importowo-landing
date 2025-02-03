@@ -15,3 +15,10 @@ export type GalleryQueryResult = {
   images: SanityImage[];
   imagesAfter?: SanityImage[];
 };
+
+export type HomepageQueryResult = {
+  _id: string;
+  smallTitle: string;
+  title: string;
+  photos: SanityImage[];
+};

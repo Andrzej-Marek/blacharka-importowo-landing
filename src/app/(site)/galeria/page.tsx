@@ -56,9 +56,6 @@ const GalleryPage = async () => {
               )}
             </div>
           ))}
-          <div className="flex justify-center">
-            <Button className="mt-4">Zobacz Wiecej</Button>
-          </div>
         </Container>
       </Section>
     </div>

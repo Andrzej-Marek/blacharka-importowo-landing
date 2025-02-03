@@ -14,9 +14,9 @@ export default async function Home() {
         subtitle="Warszowice / Żory"
       />
       <AboutUseSection />
+      <ServicesPhotosSection />
       <OurServicesSection />
       <WhyChooseUsSection />
-      <ServicesPhotosSection />
       <TestimonialsSection />
       <ContactSection />
     </div>

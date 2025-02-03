@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
-import { GalleryQueryResult } from "./sanity.types";
+import { GalleryQueryResult, HomepageQueryResult } from "./sanity.types";
 
 const imageQuery = `
   ...asset->{
@@ -46,5 +46,17 @@ ${imageQuery}
 }
     }[0]`,
     { slug },
+  );
+};
+
+export const getHomepage = () => {
+  return client.fetch<HomepageQueryResult>(
+    groq`*[_type == "homepage"][0]{
+      _id,
+smallTitle,
+title,
+photos[] {
+${imageQuery}
+  }}`,
   );
 };
