@@ -1,6 +1,10 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
-import { GalleryQueryResult, HomepageQueryResult } from "./sanity.types";
+import {
+	GalleryQueryResult,
+	HomepageQueryResult,
+	ProgiPageQueryResult,
+} from "./sanity.types";
 
 const imageQuery = `
   ...asset->{
@@ -17,8 +21,8 @@ const imageQuery = `
 }
 `;
 export async function getGalleries(): Promise<GalleryQueryResult[]> {
-  return client.fetch(
-    groq`*[_type == "gallery"]{
+	return client.fetch(
+		groq`*[_type == "gallery"]{
       _id,
 slug,
 title,
@@ -29,12 +33,12 @@ imagesAfter[] {
 ${imageQuery}
 }
     }`,
-  );
+	);
 }
 
 export const getGalleryBySlug = (slug: string) => {
-  return client.fetch<GalleryQueryResult>(
-    groq`*[_type == "gallery" && slug.current == $slug]{
+	return client.fetch<GalleryQueryResult>(
+		groq`*[_type == "gallery" && slug.current == $slug]{
       _id,
 slug,
 title,
@@ -45,18 +49,39 @@ imagesAfter[] {
 ${imageQuery}
 }
     }[0]`,
-    { slug },
-  );
+		{ slug },
+	);
 };
 
 export const getHomepage = () => {
-  return client.fetch<HomepageQueryResult>(
-    groq`*[_type == "homepage"][0]{
+	return client.fetch<HomepageQueryResult>(
+		groq`*[_type == "homepage"][0]{
       _id,
 smallTitle,
 title,
 photos[] {
 ${imageQuery}
   }}`,
-  );
+	);
+};
+
+export const getProgiPage = () => {
+	return client.fetch<ProgiPageQueryResult>(
+		groq`*[_type == "progi"][0]{
+      _id,
+heading,
+subHeading,
+whyImage{
+${imageQuery}
+},
+howItsWorksImage {
+${imageQuery}
+},
+howItsWorksImage2 {
+${imageQuery}
+},
+portfolioPhotos[] {
+${imageQuery}
+  }}`,
+	);
 };
